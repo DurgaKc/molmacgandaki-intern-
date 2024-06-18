@@ -52,7 +52,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('admin.slider.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-photo-scan text-[24px]"></i>
+                            <i class="fa fa-images"></i>
                         </span>
                         <span class="hide-menu fs-4 text-dark">स्लाइडर</span>
                     </a>
@@ -202,7 +202,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('admin.contact.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-link"></i>
+                            <i class="ti ti-phone"></i>
                         </span>
                         <span class="hide-menu fs-4">सम्पर्क</span>
                     </a>

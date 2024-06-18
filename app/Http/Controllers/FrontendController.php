@@ -36,7 +36,7 @@ class FrontendController extends Controller
                 // ->orWhere('ip_address', 'like', "%{$search}%");
             })->get();
 
-        $employees = Employee::all();
+        // $employees = Employee::all();
         return view('frontend.pages.about.employee',compact('employees'));
     }
     public function introduction()

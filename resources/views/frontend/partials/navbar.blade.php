@@ -108,7 +108,7 @@
     <nav class="col-md-3">
         <span class="my-5">
             <form action="" method="get" class="mx-5">
-                <input type="text" class="mt-2 mb-2  p-1 rounded-3 ms-3 filter-form" placeholder="Search.." autocomplete="off" value="{{ old('search', \request('search')) }}">
+                <input type="text" class="mt-2 mb-2  p-1 rounded-3 ms-3 filter-form" name="search" placeholder="Search.." autocomplete="off" value="{{ old('search', \request('search')) }}">
                 <button class="btn btn-outline-light bg-transparent rounded-3"> <i
                         class='fas fa-search text-white '></i></button>
             </form>
