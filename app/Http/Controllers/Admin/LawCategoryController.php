@@ -55,18 +55,13 @@ class LawCategoryController extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateLawCategoryRequest $request, LawCategory $lawCategory)
     {
         $lawCategory->update($request->validated());
         return Redirect(route('admin.lawCategory.index',compact('lawCategory')));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy(LawCategory $lawCategory)
     {
         $lawCategory->delete();

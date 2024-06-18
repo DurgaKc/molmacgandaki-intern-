@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-2">
                 <img src="{{officeSetting()?->flag ?? ''}}" alt="nepal-flag logo">
-
+{{-- <img src="asset('assets/frontend/images/flag.gif')"> --}}
             </div>
         </div>
 

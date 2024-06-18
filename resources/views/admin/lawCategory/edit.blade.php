@@ -1,18 +1,36 @@
 @extends('admin.layouts.master')
 @section('content')
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class=" d-flex justify-content-between">
-                            <div>
-                                <h4 class="fs-4 mt-3">कानूनवर्ग सम्पादन गर्नुहोस्</h4>
-                            </div>
-                            <div>
-                                <a href="{{ route('admin.lawCategory.index') }}"
-                                    class="btn btn-primary align-item-end">कानूनवर्ग सूची</a>
-                            </div>
+        <div class="d-flex justify-content-between">
+            <div class="p-1">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
+                                Home</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="p-1">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">
+                                Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> <a
+                                href="{{ route('admin.lawCategory.index') }}">LawsCategory</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class=" d-flex justify-content-between">
+                        <div>
+                            <h4 class="fs-4 mt-3">कानूनवर्ग सम्पादन गर्नुहोस्</h4>
+                        </div>
+                        <div>
+                            <a href="{{ route('admin.lawCategory.index') }}"
+                                class="btn btn-primary align-item-end">कानूनवर्ग सूची</a>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,14 @@
 @section('content')
     <div class="container mt-5">
         <div class="row">
+            <div class="p-2">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">
+                            Home</a></li>
+                    </ol>
+                </nav>
+            </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">

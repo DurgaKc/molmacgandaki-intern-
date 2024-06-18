@@ -1,7 +1,25 @@
 @extends('admin.layouts.master')
 @section('content')
     <div class="container mt-5">
-        <div class="row">
+        <div class="d-flex justify-content-between">
+            <div class="p-1">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">
+                            Home</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="p-1">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">
+                            Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> <a href="{{route('admin.publicationCategory.index')}}">प्रकाशन वर्ग</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -17,7 +35,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
         <div class="card">
             <div class="container">
                 <form class="row" action="{{ route('admin.publicationCategory.update', $publicationCategory) }}"

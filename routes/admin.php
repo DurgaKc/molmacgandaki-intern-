@@ -1,13 +1,16 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\DesignationController;
 use App\Http\Controllers\Admin\EmployeeController;
+use App\Http\Controllers\Admin\IntroductionController;
 use App\Http\Controllers\Admin\LawcategoryController;
 use App\Http\Controllers\Admin\LawController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\PublicationCategoryController;
 use App\Http\Controllers\Admin\PublicationController;
 use App\Http\Controllers\Admin\SettingController;
@@ -15,7 +18,7 @@ use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SubordinateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\FrontendController;
 
 Route::get('dashboard', DashboardController::class)->name('dashboard');
 
@@ -37,6 +40,9 @@ Route::resource('publication', PublicationController::class);
 Route::resource('lawCategory', LawCategoryController::class);
 Route::resource('law', LawController::class);
 Route::resource('subordinate', SubordinateController::class);
+Route::resource('contact', ContactController::class);
+Route::resource('introduction', IntroductionController::class);
+Route::resource('organization', OrganizationController::class);
 
 
 

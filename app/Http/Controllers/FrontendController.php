@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Contact\StoreContactRequest;
+use App\Models\Contact;
+use App\Models\Employee;
+use App\Models\Introduction;
+use App\Models\Law;
 use App\Models\Link;
 use App\Models\slider;
 use App\Models\Subordinate;
@@ -23,11 +28,21 @@ class FrontendController extends Controller
     }
     public function employee()
     {
-        return view('frontend.pages.about.employee');
+        $search = request('search');
+
+        $employees = Employee::when($search, function ($query, $search) {
+                $query->where('name', 'like', "%{$search}%")
+                ->orWhere('name_en', 'like', "%{$search}%");
+                // ->orWhere('ip_address', 'like', "%{$search}%");
+            })->get();
+
+        $employees = Employee::all();
+        return view('frontend.pages.about.employee',compact('employees'));
     }
     public function introduction()
     {
-        return view('frontend.pages.about.introduction');
+        $introductions = Introduction::all();
+        return view('frontend.pages.about.introduction',compact('introductions'));
     }
     public function organization(){
         return view('frontend.pages.about.organization');
@@ -49,7 +64,11 @@ class FrontendController extends Controller
     }
     public function act()
     {
-        return view('frontend.pages.legal.act');
+        $laws = Law::all();
+        return view('frontend.pages.legal.act' , compact('laws'));
+    }
+    public function lawDetail(Law $law){
+        return view('frontend.pages.legal.lawDetail',compact('law'));
     }
     public function agdv(){
         return view('frontend.pages.legal.agdv');
@@ -100,11 +119,21 @@ class FrontendController extends Controller
         return view('frontend.pages.gallery.photos');
     }
     public function contact(){
+
         return view('frontend.pages.contact');
     }
+    public function feedback(StoreContactRequest $request)
+    {
+
+            Contact::create($request->validated());
+             toast('added Sucessfully','success');
+            return back();
+    }
+
+
     public function subordinate(){
         $subordinates = Subordinate::latest()->get();
-        return view('frontend.pages.subordinate');
+        return view('frontend.pages.subordinate',compact('subordinates'));
     }
 
 }

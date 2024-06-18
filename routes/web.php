@@ -9,14 +9,20 @@ Route::controller(FrontendController::class)->group(function(){
  Route::get('/', 'index')->name('index');
  Route::get('citizen', 'citizen')->name('citizen');
  Route::get('employee', 'employee')->name('employee');
+
  Route::get('introduction', 'introduction')->name('introduction');
+
 Route::get('organization','organization')->name('organization');
 Route::get('workarea','workarea')->name('workarea');
 Route::get('agri','agri')->name('agri');
 Route::get('land','land')->name('land');
 Route::get('lives','lives')->name('lives');
 Route::get('planning','planning')->name('planning');
+
 Route::get('act', 'act')->name('act');
+Route::get('lawDetail/{law}', 'lawDetail')->name('lawDetail');
+
+
 Route::get('document','document')->name('document');
 Route::get('procedure','procedure')->name('procedure');
 Route::get('agdv','agdv')->name('agdv');
@@ -32,7 +38,10 @@ Route::get('news','news')->name('news');
 Route::get('photo','photo')->name('photo');
 Route::get('vedio','vedio')->name('vedio');
 Route::get('audio','audio')->name('audio');
+
 Route::get('contact','contact')->name('contact');
+Route::post('feedback','feedback')->name('feedback');
+
 Route::get('subordinate','subordinate')->name('subordinate');
 });
 

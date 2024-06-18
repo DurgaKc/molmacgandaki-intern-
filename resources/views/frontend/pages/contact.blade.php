@@ -5,32 +5,33 @@
     <div class="row">
         <div class="col-md-5">
             <h4 class="fw-bold mt-5 mb-3 ms-4">सम्पर्क विवरण</h4>
-            <form class="ms-4">
+            <form class="ms-4" action="{{route('feedback')}}" method="POST">
+                @csrf
                 <div class="contact">
                     <div class="d-flex">
                         <div>
                             <label>पुरा नाम *</label>
-                            <input type="text" class="form-control" placeholder="पुरा नाम">
+                            <input type="text" class="form-control" name="fullname" placeholder="पुरा नाम">
                         </div>
                         <div class="ms-3">
                             <label>फोन नं. *</label>
-                            <input type="text" class="form-control" placeholder="+977">
+                            <input type="text" class="form-control" name="phone" placeholder="+977">
                         </div>
                     </div>
 
                     <div class="d-flex">
                         <div class="my-3">
                             <label>ईमेल *</label>
-                            <input type="email" class="form-control" placeholder="ईमेल *">
+                            <input type="email" class="form-control" name="email" placeholder="ईमेल *">
                         </div>
                         <div class="ms-3 my-3">
                             <label>सम्पर्कको उद्देश्य *</label>
-                            <input type="text" class="form-control" placeholder="--सम्पर्कको उद्देश्य--">
+                            <input type="text" class="form-control"  name="objective" placeholder="--सम्पर्कको उद्देश्य--">
                         </div>
                     </div>
                 </div>
                 <label class=" mt-3">सन्देश *</label>
-                <textarea class="form-control" placeholder="सन्देश *" rows="5" cols="20"></textarea>
+                <textarea class="form-control" placeholder="सन्देश *"  name="message"></textarea>
                 <div class="d-flex justify-content-end">
                     <button class="btn btn-primary text-white mt-2 ">पठाउनुहोस</button>
 

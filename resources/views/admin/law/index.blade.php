@@ -36,7 +36,7 @@
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $law->title ?? '' }}</td>
-                        <td><img src="{{ $law->photo }}" width="100" height="100"></td>
+                        <td><iframe src="{{ $law->photo }}"  frameborder="0"></iframe></td>
                         <td>{{ $law->publisher ?? '' }}</td>
                         <td>{{ $law->lawCategory->title ?? '' }}</td>
                         <td>{{ $law->date ?? '' }}</td>

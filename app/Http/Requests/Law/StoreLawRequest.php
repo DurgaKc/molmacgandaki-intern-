@@ -25,7 +25,7 @@ class StoreLawRequest extends FormRequest
         return [
             'title' =>['required','string'],
             'title_en' =>['required','string'],
-            'photo'=>['required','mimes:png,jpeg,jpg'],
+            'photo'=>['required','file','mimes:png,jpeg,jpg,pdf'],
             'law_category_id' =>['required', Rule::exists('law_categories', 'id')->withoutTrashed()],
             'publisher' =>['required','string'],
             'publisher_en' =>['required','string'],

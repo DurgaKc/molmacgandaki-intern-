@@ -11,11 +11,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel="stylesheet"  href="{{asset('assets/frontend/css/style.css')}}">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-   <title>@yield('title')/Gandaki</title>
+   <title>@yield('title')/कृषि तथा भूमि व्यवस्था मन्त्रालय</title>
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-
+    @include('sweetalert::alert')
 
 
     <!--------------- header ------------------>

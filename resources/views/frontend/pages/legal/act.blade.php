@@ -56,54 +56,20 @@
                 </div>
 
             </div>
+            @foreach ($laws as $law )
             <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="act">
                         <div class="card border-dark">
-                            <h6><i class='fas fa-download'></i></h6>
-                            <p class="py-0 ms-3 mt-4 ">सेवा शुल्क तथा दस्तुर सम्बन्धी सूचना</p>
-                            <h5 class="pt-0 fs-8 pb-2 mt-0 ms-3">ऐन तथा नियमावलीहरु 2080-4-18 |</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="act">
-                        <div class="card border-dark">
-                            <h6><i class='fas fa-download'></i></h6>
-                            <p class="py-0 ms-3 mt-4 ">प्रदेश कृषि व्यवसाय प्रबर्द्धन ऐन - २०७७</p>
-                            <h5 class="pt-0 fs-8 pb-2 mt-0 ms-3">ऐन तथा नियमावलीहरु 2079-7-27 |</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="act">
-                        <div class="card border-dark">
-                            <h6><i class='fas fa-download'></i></h6>
-                            <p class="py-0 ms-3 mt-4 ">सहकारी ऐन, २०७५ </p>
-                            <h5 class="pt-0 fs-8 pb-2 mt-0 ms-3">ऐन तथा नियमावलीहरु 2077-3-29|</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-4">
-                    <div class="act">
-                        <div class="card border-dark">
-                            <h6><i class='fas fa-download'></i></h6>
-                            <p class="py-0 ms-3 mt-4 ">गण्डकी प्रदेश खाद्य परिषद् (गठन तथा सञ्चालन) आदेश, २०७८</p>
-                            <h5 class="pt-0 fs-8 pb-2 mt-0 ms-3">ऐन तथा नियमावलीहरु 2078-11-25 |</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-4">
-                    <div class="act">
-                        <div class="card border-dark">
-                            <h6><i class='fas fa-download'></i></h6>
-                            <p class="py-0 ms-3 mt-4 ">गण्डकी प्रदेश सहकारी नियमावली २०७६ राजपत्र</p>
-                            <h5 class="pt-0 fs-8 pb-2 mt-0 ms-3">ऐन तथा नियमावलीहरु  2077-2-13|</h5>
+                            <h6><a href="{{route('lawDetail',$law)}}"><i class='fas fa-download'></i></a> </h6>
+                            <p class="py-0 ms-3 mt-4 ">{{$law->title ?? ''}}</p>
+                            <h5 class="pt-0 fs-8 pb-2 mt-0 ms-3">ऐन तथा नियमावलीहरु {{$law->date ?? ''}}</h5>
+
                         </div>
                     </div>
                 </div>
             </div>
-
+            @endforeach
         </div>
     </div>
 </div>

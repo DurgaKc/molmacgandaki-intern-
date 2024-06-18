@@ -33,6 +33,23 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('admin.introduction.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-article"></i>
+                        </span>
+                        <span class="hide-menu">परिचय</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('admin.organization.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-article"></i>
+                        </span>
+                        <span class="hide-menu">संगठन संरचना</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('admin.slider.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-photo-scan text-[24px]"></i>
@@ -182,10 +199,19 @@
                     </a>
                 </li>
 
-
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('admin.contact.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-link"></i>
+                        </span>
+                        <span class="hide-menu fs-4">सम्पर्क</span>
+                    </a>
+                </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('admin.link.index') }}" aria-expanded="false">
-
+                        <span>
+                            <i class="ti ti-link"></i>
+                        </span>
                         <span class="hide-menu fs-4">लिंक</span>
                     </a>
                 </li>

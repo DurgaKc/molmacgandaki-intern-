@@ -25,7 +25,7 @@ class UpdateLawRequest extends FormRequest
         return [
             'title' =>['required','string'],
             'title_en' =>['required','string'],
-            'photo'=>['nullable','mimes:png,jpeg,jpg'],
+            'photo'=>['nullable','file','mimes:png,jpeg,jpg,pdf'],
             'lawsCategory_id' =>['nullable',Rule::exists('lawsCategories', 'id')->withoutTrashed()],
             'publisher' =>['required','string'],
             'publisher_en' =>['nullable','string'],
